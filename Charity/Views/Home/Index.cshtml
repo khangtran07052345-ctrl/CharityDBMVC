@@ -1,0 +1,367 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+}
+
+<style>
+    .charity-home {
+        color: #123567;
+        font-family: Arial, sans-serif;
+    }
+
+    .hero {
+        background: linear-gradient(110deg, #e7f3ff, #f7fbff);
+        border-radius: 16px;
+        padding: 55px 35px;
+        margin: 15px 0 45px;
+    }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: bold;
+            line-height: 1.25;
+            margin: 15px 0;
+        }
+
+        .hero p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #526984;
+        }
+
+    .btn-charity {
+        background: #0866d9;
+        color: white !important;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 20px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 8px 5px 0 0;
+        vertical-align: middle;
+    }
+
+        .btn-charity:hover {
+            background: #064fa9;
+        }
+
+    .section-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+
+    .campaign-card {
+        border: 1px solid #e3eaf2;
+        border-radius: 12px;
+        overflow: hidden;
+        height: 100%;
+        background: white;
+        box-shadow: 0 3px 12px rgba(0, 40, 90, 0.06);
+    }
+
+        .campaign-card img {
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+        }
+
+    .campaign-content {
+        padding: 17px;
+    }
+
+        .campaign-content h4 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 12px 0 8px;
+        }
+
+        .campaign-content p {
+            color: #65758b;
+            font-size: 14px;
+            min-height: 40px;
+        }
+
+    .category {
+        display: inline-block;
+        color: #0866d9;
+        background: #e8f2ff;
+        border-radius: 20px;
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+
+    .progress-track {
+        height: 8px;
+        background: #e6edf4;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 15px 0 8px;
+    }
+
+    .progress-fill {
+        height: 100%;
+        background: #2fc477;
+        border-radius: 10px;
+    }
+
+    .money-info {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+        .money-info strong {
+            color: #123567;
+        }
+
+    .campaign-button {
+        display: block;
+        text-align: center;
+        background: #0866d9;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 7px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+        .campaign-button:hover {
+            background: #064fa9;
+        }
+
+    .impact {
+        background: #edf6ff;
+        border-radius: 14px;
+        padding: 30px 20px;
+        margin: 40px 0 20px;
+        text-align: center;
+    }
+
+    .impact-number {
+        color: #0866d9;
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .impact p {
+        color: #526984;
+        font-size: 13px;
+    }
+
+    .campaigns {
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="charity-home">
+
+    <!-- BANNER TRANG CHU -->
+    <section class="hero">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <span style="color:#2585ee;font-weight:bold;">
+                    VÌ MỘT CỘNG ĐỒNG TỐT ĐẸP HƠN 
+                </span>
+
+                <h1>Chung tay tạo nên<br />sự thay đổi</h1>
+
+                <p>
+                    Mỗi đóng góp của bạn đều mang lại hy vọng,
+                    giúp đỡ những hoàn cảnh khó khăn và xây dựng
+                    một tương lai tốt đẹp hơn cho cộng đồng.
+                </p>
+
+                <a href="#chien-dich" class="btn-charity">
+                    ♥ Khám phá chiến dịch
+                </a>
+
+                <a href="#gioi-thieu"
+                   class="btn btn-outline-primary"
+                   style="border-radius: 8px; padding: 12px 20px; vertical-align: middle; margin-top:8px;">
+                    Tìm hiểu thêm
+                </a>
+            </div>
+
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=80"
+                     alt="Hoạt động thiện nguyện"
+                     style="width:100%;height:300px;object-fit:cover;border-radius:14px;" />
+            </div>
+        </div>
+    </section>
+
+    <!-- DANH SACH CHIEN DICH -->
+    <section id="chien-dich" class="campaigns">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <span style="color:#2585ee;font-size:12px;font-weight:bold;">
+                    CÁC CHIẾN DỊCH NỔI BẬT
+                </span>
+                <h2 class="section-title" style="margin-top:8px;margin-bottom:0;">
+                    Cùng nhau lan tỏa yêu thương
+                </h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- CHIEN DICH 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="campaign-card">
+                    <img src="@Url.Content("~/Content/Image/images (5).jpg")" alt="Trẻ em vùng cao"/>
+                    <div class="campaign-content">
+                        <span class="category">Giáo dục</span>
+                        <h4>Tiếp bước các em đến trường</h4>
+                        <p>Hỗ trợ học bổng cho trẻ em có hoàn cảnh khó khăn.</p>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:68%;"></div>
+                        </div>
+
+                        <div class="money-info">
+                            <strong>68.000.000đ</strong>
+                            <strong>68%</strong>
+                        </div>
+
+                        <div class="money-info">
+                            <span>Đã quyên góp</span>
+                            <span>Mục tiêu 100 triệu</span>
+                        </div>
+
+                        <a href="@Url.Action("Index", "Home")"
+                           class="campaign-button">♥ Quyên góp ngay</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHIEN DICH 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="campaign-card">
+                    <img src="@Url.Content("~/Content/Image/images (2).jpg")" alt="Cứu trợ vùng lũ" />
+                    <div class="campaign-content">
+                        <span class="category">Cứu trợ</span>
+                        <h4>Hỗ trợ đồng bào gặp lũ lụt</h4>
+                        <p>Chung tay giúp đỡ các gia đình bị ảnh hưởng bởi thiên tai.</p>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:52%;"></div>
+                        </div>
+
+                        <div class="money-info">
+                            <strong>52.000.000đ</strong>
+                            <strong>52%</strong>
+                        </div>
+
+                        <div class="money-info">
+                            <span>Đã quyên góp</span>
+                            <span>Mục tiêu 100 triệu</span>
+                        </div>
+
+                        <a href="@Url.Action("Index", "Home")"
+                           class="campaign-button">♥ Quyên góp ngay</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHIEN DICH 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="campaign-card">
+                   <img src="@Url.Content("~/Content/Image/images (3).jpg")" alt="Chăm sóc người cao tuổi" />
+                    <div class="campaign-content">
+                        <span class="category">Y tế</span>
+                        <h4>Chăm sóc người già neo đơn</h4>
+                        <p>Hỗ trợ chi phí sinh hoạt và chăm sóc người cao tuổi.</p>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:36%;"></div>
+                        </div>
+
+                        <div class="money-info">
+                            <strong>36.000.000đ</strong>
+                            <strong>36%</strong>
+                        </div>
+
+                        <div class="money-info">
+                            <span>Đã quyên góp</span>
+                            <span>Mục tiêu 100 triệu</span>
+                        </div>
+
+                        <a href="@Url.Action("Index", "Home")"
+                           class="campaign-button">♥ Quyên góp ngay</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHIEN DICH 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="campaign-card">
+                    <img src="@Url.Content("~/Content/Image/images (4).jpg")" alt="Sinh viên tình nguyện" />
+                    <div class="campaign-content">
+                        <span class="category">Nhân đạo</span>
+                        <h4>Mang hơi ấm đến vùng cao</h4>
+                        <p>Hỗ trợ quần áo, đồ dùng và dinh dưỡng cho trẻ em.</p>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:74%;"></div>
+                        </div>
+
+                        <div class="money-info">
+                            <strong>74.000.000đ</strong>
+                            <strong>74%</strong>
+                        </div>
+
+                        <div class="money-info">
+                            <span>Đã quyên góp</span>
+                            <span>Mục tiêu 100 triệu</span>
+                        </div>
+
+                        <a href="@Url.Action("Index", "Home")"
+                           class="campaign-button">♥ Quyên góp ngay</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- THONG KE MINH HOA -->
+    <section id="gioi-thieu" class="impact">
+        <h2 style="font-weight:bold;margin-bottom:10px;">
+            Chung tay tạo nên những điều ý nghĩa
+        </h2>
+
+        <p>
+            Mỗi hành động nhỏ đều có thể mang đến sự thay đổi tích cực.
+        </p>
+
+        <div class="row mt-4">
+            <div class="col-6 col-md-3">
+                <div class="impact-number">12+</div>
+                <p>Chiến dịch minh họa</p>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="impact-number">5.280+</div>
+                <p>Nhà hảo tâm minh họa</p>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="impact-number">1,2 tỷ+</div>
+                <p>Tiền quyên góp minh họa</p>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="impact-number">8.600+</div>
+                <p>Lượt hỗ trợ minh họa</p>
+            </div>
+        </div>
+
+        <a href="#chien-dich" class="btn-charity">
+            ♥ Cùng tham gia
+        </a>
+    </section>
+
+</div>

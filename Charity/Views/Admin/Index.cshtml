@@ -1,0 +1,203 @@
+﻿
+@{
+    ViewBag.Title = "Quản trị hệ thống";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4 mb-5">
+    <h2 class="mb-2">BẢNG ĐIỀU KHIỂN ADMIN</h2>
+
+    <p class="text-muted">
+        Xin chào, @Session["FullName"]!
+        Chào mừng bạn đến với hệ thống quản trị CHARITY.
+    </p>
+
+    <hr />
+
+    <!-- THỐNG KÊ DỮ LIỆU THẬT -->
+    <h4 class="mb-3">Thống kê từ database</h4>
+
+    <div class="row">
+        <div class="col-md-6 col-lg-3 mb-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h6 class="text-muted">Chiến dịch thực tế</h6>
+                    <h2>@ViewBag.TotalCampaigns</h2>
+                    <p class="mb-0">Tổng số chiến dịch trong database</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h6 class="text-muted">Người dùng</h6>
+                    <h2>@ViewBag.TotalUsers</h2>
+                    <p class="mb-0">Tổng số tài khoản</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h6 class="text-muted">Lượt quyên góp</h6>
+                    <h2>@ViewBag.TotalDonations</h2>
+                    <p class="mb-0">Tổng số bản ghi</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h6 class="text-muted">Tổng tiền ghi nhận</h6>
+                    <h4>
+                        @string.Format("{0:N0} đ", ViewBag.TotalAmount)
+                    </h4>
+                    <p class="mb-0">Tổng tiền từ database</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SỐ LIỆU MINH HỌA TRÊN TRANG CHỦ -->
+    <hr class="mt-4" />
+
+    <h4 class="mb-2">Số liệu trên trang chủ</h4>
+
+    <p class="text-muted">
+        Dữ liệu này phục vụ giao diện, không phải số liệu thực tế trong database.
+    </p>
+
+    <div class="row">
+        <!-- Chiến dịch 1 -->
+        <div class="col-md-6 mb-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5>Tiếp bước các em đến trường</h5>
+                    <p class="mb-2">
+                        68.000.000 đ / 100.000.000 đ
+                    </p>
+                    <div class="progress">
+                        <div class="progress-bar bg-success"
+                             role="progressbar"
+                             style="width: 68%;"
+                             aria-valuenow="68"
+                             aria-valuemin="0"
+                             aria-valuemax="100">
+                            68%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chiến dịch 2 -->
+        <div class="col-md-6 mb-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5>Hỗ trợ đồng bào gặp lũ lụt</h5>
+                    <p class="mb-2">
+                        52.000.000 đ / 100.000.000 đ
+                    </p>
+                    <div class="progress">
+                        <div class="progress-bar bg-success"
+                             role="progressbar"
+                             style="width: 52%;"
+                             aria-valuenow="52"
+                             aria-valuemin="0"
+                             aria-valuemax="100">
+                            52%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chiến dịch 3 -->
+        <div class="col-md-6 mb-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5>Chăm sóc người già neo đơn</h5>
+                    <p class="mb-2">
+                        36.000.000 đ / 100.000.000 đ
+                    </p>
+                    <div class="progress">
+                        <div class="progress-bar bg-success"
+                             role="progressbar"
+                             style="width: 36%;"
+                             aria-valuenow="36"
+                             aria-valuemin="0"
+                             aria-valuemax="100">
+                            36%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chiến dịch 4 -->
+        <div class="col-md-6 mb-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5>Mang hơi ấm đến vùng cao</h5>
+                    <p class="mb-2">
+                        74.000.000 đ / 100.000.000 đ
+                    </p>
+                    <div class="progress">
+                        <div class="progress-bar bg-success"
+                             role="progressbar"
+                             style="width: 74%;"
+                             aria-valuenow="74"
+                             aria-valuemin="0"
+                             aria-valuemax="100">
+                            74%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-info mt-2">
+        <h5 class="mb-2">Tổng số liệu</h5> 
+        <p class="mb-1">
+            Tổng quyên góp: <strong>230.000.000 đ</strong>
+        </p>
+        <p class="mb-0">
+            Tổng mục tiêu: <strong>400.000.000 đ</strong>
+            — Hoàn thành <strong>57,5%</strong>
+        </p>
+    </div>
+
+    <!-- CHỨC NĂNG QUẢN TRỊ -->
+    <h4 class="mt-4 mb-3">Chức năng quản trị</h4>
+
+    <div class="list-group">
+        <a href="@Url.Action("Index", "Campaigns")"
+           class="list-group-item list-group-item-action">
+            Quản lý chiến dịch
+        </a>
+
+        <a href="@Url.Action("Index", "Donations")"
+           class="list-group-item list-group-item-action">
+            Quản lý quyên góp
+        </a>
+
+        <a href="@Url.Action("Index", "Users")"
+           class="list-group-item list-group-item-action">
+            Quản lý người dùng
+        </a>
+    </div>
+
+    <div class="mt-4">
+        @Html.ActionLink(
+            "Đăng xuất",
+            "Logout",
+            "Account",
+            null,
+            new { @class = "btn btn-danger" }
+        )
+    </div>
+</div>
